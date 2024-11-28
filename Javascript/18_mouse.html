@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1" onmouseenter="changetext()" onmouseleave="changetext2()">hello javascript</h1>
+
+    <button onclick="changetext()">Chnage text</button>
+
+    <script>
+        h1_tag = document.getElementById("h1")
+
+        function changetext (){
+            h1_tag.innerHTML = "hello World";
+            h1_tag.style.color = "red"
+        }
+
+        function changetext2(){
+            h1_tag.innerHTML = "hello javascript";
+            h1_tag.style.color = "blue"
+        }
+
+    </script>
+</body>
+</html>

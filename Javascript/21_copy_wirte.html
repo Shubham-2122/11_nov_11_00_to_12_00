@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="inp" placeholder="Enter your keyword" onkeypress="addtext()"> -->
+    <input type="text" id="inp" placeholder="Enter your keyword" onkeyup="addtext()" >
+    <textarea name="" cols="40" rows="10" id="textaree" ></textarea>
+    <br>
+    <button onclick="addtext()">Add</button>
+
+    <script>
+        inp_tag = document.getElementById("inp")
+        textarea = document.getElementById("textaree")
+        console.log(inp_tag)
+
+        function addtext(){
+            textarea.innerHTML = inp_tag.value;
+        }
+
+    </script>
+</body>
+</html>

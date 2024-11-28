@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add{
+            width: 50%;
+            margin: 0 auto;
+            padding: 50px;
+            font-size: 60px;
+            background: linear-gradient(red,green,blue);
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="Addcss()">Add css</button>
+    <button onclick="removecss()">remove css</button>
+
+    <button onclick="tooglecss()">toggle css</button>
+    <div id="main">Hello javascript data</div>
+
+    <script>
+        main_tag = document.getElementById("main")
+        console.log(main_tag)
+
+        function Addcss(){
+            main_tag.classList.add("add")
+            console.log("add")
+            // document.getElementById("main").classList.add 
+        }
+
+        function removecss(){
+            main_tag.classList.remove("add")
+            // document.getElementById("main").classList.add 
+        }
+
+        function tooglecss(){
+            main_tag.classList.toggle("add")
+        }
+    </script>
+    
+</body>
+</html>
