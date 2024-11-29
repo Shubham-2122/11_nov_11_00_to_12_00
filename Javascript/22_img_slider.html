@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="/img/img1.jpeg" height="100%" width="100%" alt="" id="img">
+    </div>
+    <button onclick="changeimg()">change imge</button>
+
+
+    <script>
+
+        img_tag = document.getElementById("img")
+        console.log(img_tag)
+        console.log(img_tag.src)
+
+        function changeimg(){
+            console.log("hello")
+            if(img_tag.src.match("/img/img1.jpeg")){
+                img_tag.src = "/img/img2.jpeg"
+            }
+            else if(img_tag.src.match("/img/img2.jpeg"))
+            {
+                  img_tag.src = "/img/img3.jpeg"
+            }
+            else if(img_tag.src.match("/img/img3.jpeg"))
+            {
+                img_tag.src = "/img/img4.jpeg"
+            }
+            else{
+                 img_tag.src = "/img/img1.jpeg"
+            }
+        }
+
+    </script>
+</body>
+</html>
