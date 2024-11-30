@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+
+        input[type="text"]:focus-visible {
+            outline: none;
+        }
+    </style>
+    <script>
+        function check_blank() {
+            let fname = document.getElementById("fname").value;
+            if (fname == "" || fname == null) {
+                document.getElementById("msg").innerText = "Enter firstname"
+                document.getElementById("fname").innerHTML = "<style>#fname{border :1px solid red}</style>"
+                return false;
+            }
+        }
+        // test()  => regular_ex.test(variable_name)
+        // match()  => variable_name.match(regular_ex)
+        function check_name() {
+            let fname = document.getElementById("fname").value;
+            let reg_ex = /^[a-zA-Z]*$/
+            if (reg_ex.test(fname)) {
+                document.getElementById("msg").innerHTML = ""
+                return false
+            } else {
+                document.getElementById("msg").innerHTML = "Number not allowed"
+                return false
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#">
+        First Name :
+        <input type="text" name="f_name" id="fname" onkeyup="return check_name()">
+        <span id="msg"></span>
+
+        <br><br>
+        <button type="submit" onclick="return check_blank()">Check name</button>
+    </form>
+</body>
+
+</html>

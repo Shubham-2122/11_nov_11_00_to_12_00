@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" >
+        <div>
+            <label for=""> Name :- </label>
+            <input type="text" placeholder="Enter your name" onblur="return validation(nm,nmerr)" id="nm">
+            <span id="nmerr"></span>
+        </div>
+        <div>
+            <label for=""> Email :- </label>
+            <input type="email" placeholder="Enter your email" onblur="return validation(email,emerr)" id="email">
+            <span id="emerr"></span>
+        </div>
+        <div>
+            <label for="">Phone :- </label>
+            <input type="tel" placeholder="Enter your Phone" required onblur="return validation(num,numerr)" id="num">
+            <span id="numerr"></span>
+        </div>
+        <div>
+            <label for=""> Password :- </label>
+            <input type="password" placeholder="Enter your Password"  onblur="return validation(psw,pswerr)" id="psw">
+            <span id="pswerr"></span>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+        function validation(inp,err){
+            if(inp.value == "" || inp.value == null){
+                err.innerHTML = "Pls Required this...!";
+                err.style.color = "red";
+                return false
+            }
+            else{
+                err.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

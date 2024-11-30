@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <form action="#">
+        Enter Email :
+        <!-- onkeyup = "return check_email_ex()" -->
+        <input type="text" name="" id="mail" onblur="return check_email_ex()">
+        <span id="msg1"></span>
+        <br><br>
+
+        <button type="submit" onclick="return check_blank()">Check Email</button>
+    </form>
+
+    shubhamjadav.tops@gmail.com
+    <script>
+
+
+        function check_blank() {
+            let mail = document.getElementById("mail").value;
+            if (mail == "") {
+                document.getElementById("msg1").innerHTML = "Enter Email"
+                return false
+            }
+        }
+        // for regular expression used w3resource website
+        function check_email_ex() {
+            let mail = document.getElementById("mail").value;
+            let reg_ex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            if (reg_ex.test(mail)) {
+                document.getElementById("msg1").innerHTML = "";
+                return false
+            }
+            else {
+                document.getElementById("msg1").innerHTML = "Enter valid email address";
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>
