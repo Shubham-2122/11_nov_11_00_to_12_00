@@ -6,16 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+
     <!-- array :- Store a mutiple value in single varibale. [muliple] . index :- start 0 -->
-     <!-- array :- store in variobale non-primitive data -->
+     <!-- array :- store in variobale non-primitive data :- values[index] -->
 <!-- 
 
      syntax :- 
      var arr = [1,2,3,4,"shu","sadf",true,false] -->
 
-
+    
      <script>
-        var arr = [12,34,34,2,324,33,53,"ab","asd","asdf","asf"]
+        var arr = [12,34,34,2,324,33,53,[12,23,24,34,[22,3,4,55,6]],"ab","asd","asdf","asf"]
         // console.log(arr)
         console.log(arr)
         console.log(arr[4])
@@ -37,7 +38,14 @@
 
         for(let i of arr){
             // console.log(i)
+            // value
             document.write("values=>",i,"<br>")
+        }
+
+        for(let a in arr){
+            // index
+            // console.log(a)
+            console.log(arr[a])
         }
      </script>
 </body>

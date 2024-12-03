@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- object ;- mutiple values in single varibale {}. key and value  -->
+<!-- 
+    syntax :- 
+    let varibale = {
+        key : value,
+    } -->
+
+    <script>
+
+        let person = {
+            name : "Rutkvik patel",
+            age : 24 ,
+            course : "Front-end"
+        }
+
+        // console.log(person)
+        // console.log(person.name)
+        // document.write(person.name,"<br>")
+        // document.write(person.age)
+
+        document.write(person)
+
+        for(let data in person){
+            console.log(data)
+            console.log(person[data])
+        }
+
+    </script>
+</body>
+</html>
