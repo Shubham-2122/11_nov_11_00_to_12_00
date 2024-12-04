@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            color: white;
+            font-size: 20px;
+            background:linear-gradient(red,green) ;
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="/img/img1.jpeg" alt="" height="100%" width="100%" class="img">
+        <img src="/img/img2.jpeg" alt="" height="100%" width="100%" class="img">
+        <img src="/img/img3.jpeg" alt="" height="100%" width="100%" class="img">
+        <img src="/img/img4.jpeg" alt="" height="100%" width="100%" class="img">
+    </div>
+    <button>Chnage Imge (next)</button>
+
+
+    <script>
+
+     img_tag = document.getElementsByClassName('img')
+     console.log(img_tag)
+     let index = 0
+
+    function silder(){
+        for(let i=0;i<img_tag.length;i++){
+            // console.log(i)
+            // console.log(img_tag[i])
+            img_tag[i].style.display = "none";
+        }
+        // 1
+        img_tag[index].style.display = "block";
+        index++;
+
+        // 4 = > 0 => img 
+        if(index == 4){
+            index = 0
+        }
+        setTimeout("silder()",1000)
+    }
+    silder()
+
+
+    </script>
+</body>
+</html>
