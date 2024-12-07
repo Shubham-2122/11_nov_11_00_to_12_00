@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class :- data memebr(vriable) and member function(function) class
+    class :-  blue print of object
+    
+    syntax 
+    class abc{
+       member function  
+        function name(){
+            data member
+            let vaib = "";
+
+
+        }
+        function name(){
+
+        }
+    } 
+    
+    let name  = new claname
+    name
+    
+    -->
+
+
+    <script>
+        class bank{
+            // memeber function
+            x = function bankdetils(pin,blance){
+                
+                // data memeber
+                let bankname = "HDFC";
+                let IFCE = "HD098245F";
+                let pinnumer = pin;
+                let bankbalance = blance;
+
+                console.log("Pin =>",pin);
+                console.log("Bank Name => ",bankname);
+                console.log("Bank Balnce =>",bankbalance );
+                console.log("IFCE code =>",IFCE);
+            } 
+
+
+            y = function windwore(){
+                console.log("Cash w")
+            }
+
+            
+        }
+
+        // console.log(bank)
+
+        let rutvik = new bank;
+        let hetvi = new bank;
+        // console.log(rutvik.x(123,20000))
+        rutvik.x(123,20000)
+        rutvik.x(123,30000)
+
+        console.log(hetvi)
+        hetvi.y()
+    </script>
+</body>
+</html>
