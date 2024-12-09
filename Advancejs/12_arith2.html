@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class arith{
+            // values
+            constructor(a,b){
+                this.a = a;
+                this.b = b
+            }
+            sum = function total(){
+                console.log(`sum of two number :- ${this.a + this.b}`);
+                document.write(`sum of two number :- ${this.a + this.b}`);
+            }
+            sub(){
+                console.log("sub of two number :-",this.a - this.b);
+            }
+            mul(){
+                console.log(`mul of two number :- ${this.a * this.b}`)
+            }
+        }
+
+        let ab = new arith(40,20)
+        console.log(ab)
+        ab.sum()
+        ab.mul()
+    
+    </script>
+</body>
+</html>

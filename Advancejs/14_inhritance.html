@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) single :- one to one 
+    2) muti level :- one to two to three
+    3) mutiple :-  not possible
+    4) hirachical :- one prerent and two child(a b)
+    5) hybrid :- 4 method 2 comibe(single and muti )  -->
+
+
+    <script>
+
+        class A{
+            x(){
+                console.log("This is prerent Proprty");
+            }
+        }
+
+        class B extends A{
+            y(){
+                console.log("This is Child Proprty");
+            }
+        }
+
+        let ab = new B 
+        ab.x();
+        ab.y()
+
+
+    </script>
+</body>
+</html>
