@@ -7,28 +7,56 @@
 </head>
 <body>
     <script>
-        class A {
-            x(){
-                console.log("This prorty is grandfather");
-            }
-        }       
         
+        // mutltilevel
+        // class A {
+        //     x(){
+        //         console.log("This prorty is grandfather");
+        //     }
+        // }       
+        
+        // class B extends A{
+        //     y(){
+        //         console.log("This Prorty is father");
+        //     }
+        // }
+
+        // class C extends B{
+        //     z(){
+        //         console.log("This prorty is child")
+        //     }
+        // }
+
+        // let abc = new C;
+        // abc.z()
+        // abc.x()
+        // abc.y()
+
+        // hyachical 
+        class A{
+            a(){
+                console.log("A function")
+            }
+        }
         class B extends A{
-            y(){
-                console.log("This Prorty is father");
+            b(){
+                console.log("B function")
+            }
+        }
+        class C extends A{
+            c(){
+                console.log("C function")
             }
         }
 
-        class C extends B{
-            z(){
-                console.log("This prorty is child")
-            }
-        }
+        let ab = new B;
+        ab.b()
+        ab.a()
 
-        let abc = new C;
-        abc.z()
-        abc.x()
-        abc.y()
+        let ac = new C;
+        ac.c()
+        ac.a()
+        
 
     </script>
 </body>

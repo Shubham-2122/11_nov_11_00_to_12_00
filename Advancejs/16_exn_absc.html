@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- encu :- data hide 
+    absc :- hide acess -->
+
+
+    <script>
+
+        function Person(name,age){
+
+            // public
+            // let name1 = name 
+
+            // private 
+            let _name = name;
+            let _age = age;
+
+            // abr
+            this.getName = function(){
+                return _name;
+            }
+
+            this.getAge = function(){
+                return _age;
+            }
+
+            this.setAge = function(newage){   
+                // return _age;
+
+                if(newage){
+                    return _age = newage;
+                }
+                else{
+                    return _age;
+                }
+            }
+
+        }
+       let abc = new Person("Rutvik",24)
+       console.log(abc)
+       console.log(abc._name) 
+       console.log(abc.getName())
+        console.log(abc._age)
+        console.log(abc.getAge())
+        console.log(abc.setAge(26))
+        console.loga(abc.getAge())
+    </script>
+</body>
+</html>

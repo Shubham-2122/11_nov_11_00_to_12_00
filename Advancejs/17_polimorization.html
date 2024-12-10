@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- compile time (overloading) :- function name same but deffent parameter in same class this overloading .   -->
+    <!-- run time (overriding) :-  function name same also same parameter in deffent class this overriding  -->
+
+    <script>
+
+    // method ovverloading 
+        // class A{
+        //     x(a){
+        //         console.log("This Frist function",a) 
+        //     }
+        //     x(a,b){
+        //         console.log("This second function sum =>",a+b);
+        //     }
+        // }
+        // let abc = new A;
+        // console.log(abc)
+        // abc.x(20,20)
+
+
+    //method overring 
+    class A {
+        display(){
+            console.log("Display 1 function")
+        }
+    }
+    class B extends A{
+        display(){
+            console.log("Display 2 function")
+        }
+    }
+    class C extends B{
+        display(){
+            console.log("Display 3 function")
+        }
+    }
+
+    // let abc = new C;
+    // console.log(abc)
+    // abc.display()
+    // abc.display()
+
+    let abc = [new A(),new B(),new C()]
+    console.log(abc)
+    abc.forEach((data)=>{
+        data.display()
+    })
+
+    </script>
+
+
+</body>
+</html>
