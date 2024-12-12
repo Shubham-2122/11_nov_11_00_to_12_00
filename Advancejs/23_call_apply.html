@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- call :- object call method sprate arrgument  -->
+    <!-- apply :- object applt method as array [argument] -->
+
+    <script>
+
+        let data = {
+            fullname : function display(city,country){
+                console.log(this.firstname + " " + this.lastname + " " + city + " " + country)
+            },
+        }
+
+        let person = {
+            firstname : "Hevi",
+            lastname : "Patel"
+        }
+
+        let person2 = {
+            firstname : "Shubham",
+            lastname : "JadaV"
+        }
+
+        // console.log(data)
+    
+        // call method as sparete argument
+        // The call() method takes arguments separately.
+        data.fullname.call(person,"ahemdabad","india")
+
+        
+        // apply method takes arguments as array.
+        data.fullname.apply(person2,["bharuch","india"])
+    
+    </script>
+
+</body>
+</html>

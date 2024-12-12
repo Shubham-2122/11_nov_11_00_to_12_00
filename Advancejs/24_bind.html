@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- call :- object call method sprate arrgument  -->
+    <!-- apply :- object applt method as array [argument] -->
+
+    <script>
+
+        let data = {
+            fullname : function display(){
+                console.log(this.firstname + " " + this.lastname)
+            },
+        }
+
+        let person = {
+            firstname : "Hevi",
+            lastname : "Patel"
+        }
+
+     
+        // bind :- method as object  
+
+        // bind :- as new object call 
+        let abc = data.fullname.bind(person)
+        // console.log(abc)
+
+        abc()
+    </script>
+
+</body>
+</html>
