@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Promise :-  one time of object (new function(res,reject)) -->
+<!-- 
+    1) pending
+    2) fullfiled (done)
+    3) reject 
+     -->
+<!-- 
+    syntax :
+    let data = new Promise(function(){
+        Codition
+    }) -->
+
+
+    <script>
+
+        // data api hold (pending). fullfild , reject
+
+        let data = new Promise(function(success,reject){
+            let a =10
+            if(a == 11){
+                // console.log("Request Sucees")
+                success("Request Sucees");
+            }
+            else{
+                // console.log("Request will be Error..")
+                reject("Request will be Error..")
+            }
+        })
+
+
+        console.log(data)
+
+    </script>
+
+</body>
+</html>

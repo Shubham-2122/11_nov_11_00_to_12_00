@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- fetch :- promise , get ,post, delete, put/patch -->
+    <!-- 
+    fetch("url",{
+        mnethod:"GET"
+    })
+    .then(()=>{
+        convert text to string
+    })
+    .then(()=>{
+        output()
+    }) -->
+
+    <h1 id="h1"></h1>
+
+    <button onclick="clickeme()">click</button>
+
+    <script>
+
+        function clickeme() {
+            fetch("data.txt", {
+                // by Defult
+                method: "GET",
+            })
+                .then((data) => {
+                    // string convert
+                    return data.text();
+                })
+                .then((data) => {
+                    console.log(data)
+                    document.getElementById("h1").innerHTML = data;
+                })
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    <h1>sdf</h1>
+    <H1>asedolk</H1> -->
+
+    <script>
+
+        function output(res){
+            console.log(res)
+            document.write(res)
+        }
+
+        let abc = new Promise(function(res,error){
+            
+            if(!res){
+                res("Call will be accept")
+            }
+            else{
+                error("Chal bhag...!");
+            }
+        })
+        .then(
+            // values 
+            function value(data){output(data)},
+            // reject
+            // function reject(data){output(data)}
+        )
+        
+        console.log(abc)
+
+
+    </script>
+</body>
+</html>
