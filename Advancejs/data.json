@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name":"Khusboo",
+        "course":"Front-end"
+    },
+    {
+        "id":2,
+        "name":"Hetvi",
+        "course":"Back-end"
+    },
+    {
+        "id":3,
+        "name":"Rutivik",
+        "course":"Full-stack"
+    }
+]

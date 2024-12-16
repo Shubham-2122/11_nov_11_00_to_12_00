@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- json :- javascript syatax object notation (no sql):
+    lightwight easy to use . 
+    Key and value [{}] -->
+
+    <!-- json string data -->
+    <!-- let json = `[
+        "id": "1",
+        "name":"Khusboo",
+        "course":"Front-end"
+    ]`; -->
+
+    <!-- object key -->
+    <!-- let object = [
+        id : 1,
+        name : "Khusboo",
+        course": "Front-end"
+    ] -->
+
+
+    <script>
+
+        let json = `[
+            {
+                "id":"1",
+                "name":"Khusboo",
+                "Coruse":"Front-end"
+            },
+             {
+                "id":"2",
+                "name":"Hetvi",
+                "Coruse":"Back-end"
+            }
+        ]`
+
+        console.log(json)
+
+        // json parse method convert object(array) 
+        let object1 = JSON.parse(json)
+        
+        // console.log(object1)
+        object1.forEach(data => {
+            console.log(data)
+            document.write(`id :- ${data.id} - name :- ${data.name} - course :- ${data.Coruse} <br>`)
+        });
+
+
+
+        let abc = [
+            {
+                id:"1",
+                name:"Hetvi",
+                Course:"front-end"
+            },
+            {
+                id:"2",
+                name:"Rutivik",
+                Course :"Back-end"
+            }
+        ]
+
+        console.log(abc)
+
+        // object to json convert stringifiy
+        let Jsondata = JSON.stringify(abc)
+        console.log(Jsondata)
+        document.write(Jsondata)
+    </script>
+
+</body>
+
+</html>

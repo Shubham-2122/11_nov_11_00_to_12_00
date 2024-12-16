@@ -1,0 +1,36 @@
+{
+    "admin":[
+        {
+            "id":1,
+            "name":"admin",
+            "email":"admin@gmail.com",
+            "password":"1234"
+        },
+        {
+            "id":2,
+            "name":"admin2",
+            "email":"admin2@gmail.com",
+            "password":"4312"
+        }
+    ],
+    "users":[
+        {
+            "id":1,
+            "name":"user1",
+            "email":"auser1@gmail.com",
+            "password":"1234"
+        },
+        {
+            "id":2,
+            "name":"user2",
+            "email":"auser2@gmail.com",
+            "password":"4321"
+        },
+        {
+            "id":3,
+            "name":"user2",
+            "email":"auser3@gmail.com",
+            "password":"2334"
+        }
+    ]
+}
