@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        fetch("data1.json",{
+            method:"GET"
+        })
+        .then((data)=>{
+            return data.json();
+        })
+        .then((data)=>{
+            console.log(data.users)
+
+            for(let users of data.users){
+                console.log(users)
+                document.write(`id :- ${users.id} , name :- ${users.name} <br>`)
+            }
+        })
+    </script>
+
+</body>
+</html>
