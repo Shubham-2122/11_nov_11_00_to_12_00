@@ -25,6 +25,7 @@
             method: "GET"
         })
             .then((data) => {
+                // object array string data
                 return data.json();
             })
             .then((product) => {
@@ -48,6 +49,9 @@
                 // document.getElementById("demo").insertAdjacentHTML("beforeend",htmldata);
                     data1.innerHTML += htmldata; 
                 }
+            })
+            .catch((err)=>{
+                console.log("Api is wrong",err)
             })
     </script>
 
