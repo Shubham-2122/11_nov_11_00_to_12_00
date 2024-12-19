@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function data(){
+            setTimeout(()=>{
+                console.log("Api data")
+            },5000)
+            console.log("data after api")
+        }
+
+        async function getdata(){
+            console.log("hello data before api");
+            const result = await data();
+            result;
+            console.log("hello2 data after api print")
+        }
+
+        getdata()
+
+    </script>
+</body>
+</html>
