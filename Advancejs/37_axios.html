@@ -11,6 +11,7 @@
     <!-- axios :- back-end api Method use already function use .  -->
 
     <!-- front-end data api easy get use axios -->
+     <!-- crud -->
 
     <script>
 
@@ -19,11 +20,56 @@
             console.log(res.data)
 
             for(let data of res.data){
-                console.log(data.id)
+                // console.log(data.id)
             }
         }
         getdata()
 
+
+        // object 
+        let person = {
+            name:"Hetvi",
+            Coruse:"Front-end",
+            city:"Surat",
+            mobile:"7825675656"           
+        }
+        // created data
+        const Createdata=async()=>{
+            const res = await axios.post("https://660d95e36ddfa2943b34c530.mockapi.io/data",person);
+            console.log(res.data);
+        }
+        // Createdata()
+
+        // delete method
+        const deletedata=async()=>{
+            const res = await axios.delete("https://660d95e36ddfa2943b34c530.mockapi.io/data/33");
+            console.log(res.data)
+        }
+
+        // deletedata()
+
+
+        // update data put(sesstion crud) + patch(crud secrity api :- login logout)
+        // update :- get(id) + create(post) :- put
+
+        // object to json
+        let person1 = {
+            id:32,
+            name:"Khushboo",
+            Coruse:"Full-stack",
+            city:"Ahemdabad",
+            state:"Gujarat",
+            mobile:"6545354536",
+            email:"khushboo@gmail.com"
+        }
+
+        const updatedata=async()=>{
+            const res = await axios.put(`https://660d95e36ddfa2943b34c530.mockapi.io/data/${person1.id}`,person1)
+            console.log(res)
+        }
+        updatedata()
+
+        
     </script>
 
 </body>
