@@ -1,0 +1,13 @@
+-> normal install
+1) node node -v
+2) npm -v
+3) npx create-react-app app-name
+4) cd app-name / deotroy
+5) npm start
+
+
+vite + react 
+1) node + npm 
+2) npm create vite@latest my-react-app --template
+3) node module :- npm install 
+4) npm run dev
