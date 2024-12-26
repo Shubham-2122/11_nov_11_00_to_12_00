@@ -11,3 +11,13 @@ vite + react
 2) npm create vite@latest my-react-app --template
 3) node module :- npm install 
 4) npm run dev
+
+
+npm install :- node module
+
+react folder sturcute
+1) node module
+2) public :- index.html :- root
+3) src:-  index.js :- createroot div paths 
+4) src :- App.js :- function componenet
+5) package.json
