@@ -21,3 +21,4 @@ react folder sturcute
 3) src:-  index.js :- createroot div paths 
 4) src :- App.js :- function componenet
 5) package.json
+6) npm init -y
