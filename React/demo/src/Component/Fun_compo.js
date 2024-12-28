@@ -1,4 +1,4 @@
-// function :- return component
+// function :- html tag return component
 
 // import React from "react";
 
@@ -39,7 +39,7 @@ import React from 'react'
 const Fun_compo = () => {
   return (
     <div>
-      <h1>asdjkasljd </h1>
+      <h1>this function compo </h1>
     </div>
   )
 }

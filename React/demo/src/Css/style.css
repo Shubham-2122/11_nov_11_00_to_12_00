@@ -1,0 +1,14 @@
+h2{
+    background-color: lightcoral;
+    width: 50%;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#name{
+    background: linear-gradient(red,green);
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
