@@ -1,9 +1,10 @@
 import React from "react";
 // import Class_compo from "./Component/Class-compo";
 // import Fun_compo from "./Component/Fun_compo";
-import Hello from "./Jsx/Hello";
-import Hello2 from "./Jsx/Hello2";
-import Css from "./Css/Css";
+// import Hello from "./Jsx/Hello";
+// import Hello2 from "./Jsx/Hello2";
+// import Css from "./Css/Css";
+import Main from "./Props/Main";
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
       {/* <Hello /> */}
       {/* <Hello2 /> */}
 
-      <Css />
+      {/* <Css /> */}
+
+
+      {/* Props data */}
+      <Main />
     </div>
   );
 }
