@@ -5,11 +5,15 @@ import React from "react";
 // import Hello2 from "./Jsx/Hello2";
 // import Css from "./Css/Css";
 import Main from "./Props/Main";
+import Boostrap from "./boostrap/Boostrap";
+import React_btn from "./boostrap/React-btn";
+import Footer from "./boostrap/Footer";
+import Main_state from "./State/Main-state";
 
 function App() {
   return (
     <div>
-      <h1>Hello this app page</h1>
+      {/* <h1 className="bg-danger">Hello this app page</h1> */}
       
       {/* component */}
       {/* <Class_compo /> */}
@@ -23,7 +27,15 @@ function App() {
 
 
       {/* Props data */}
-      <Main />
+      
+      {/* <Main /> */}
+
+      {/* boostrap */}
+      {/* <Boostrap /> */}
+      {/* <React_btn /> */}
+      {/* <Footer /> */}
+
+      <Main_state />
     </div>
   );
 }

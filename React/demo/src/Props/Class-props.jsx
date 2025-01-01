@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 
 class Class_props extends Component {
+    // as object
     constructor(props){
         super(props);
         this.data = props;

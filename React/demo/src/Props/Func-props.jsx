@@ -1,5 +1,6 @@
 // props :- mes proprysties
 // data one data component to other component call
+// constror auto call
 
 import React from 'react'
 
