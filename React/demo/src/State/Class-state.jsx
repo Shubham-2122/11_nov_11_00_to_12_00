@@ -21,6 +21,8 @@ import Images from './Images';
         }
         
     }
+    // incement
+    // decment
     
 
 
@@ -30,6 +32,7 @@ import Images from './Images';
       <div>
         <h1>hello .. {this.state.count}</h1>
         <h1>Hello .. {this.state.count}</h1>
+        {/* event base */}
         <button className='btn btn-success' onClick={()=>this.setState({count:this.state.count + 1})}>Incement</button>
         <button className='btn btn-danger' onClick={()=>this.setState({count:this.state.count - 1})}>Decment</button>
         {/* <button className='btn btn-primary' onClick={()=>this.setState({count:this.state.count * 0})}>Reset</button> */}
@@ -44,7 +47,9 @@ import Images from './Images';
         <button className='btn btn-primary'  onClick={()=>this.setState({isImage:true})}>Show</button>
 
         <button className='btn btn-success'>Toggle</button>
-
+{/* 
+    !true = false 
+    !false = true */}
         {
             (this.state.isImage) ? <Images /> : false
         }
