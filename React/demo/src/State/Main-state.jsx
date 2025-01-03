@@ -4,6 +4,7 @@
 import React from 'react'
 import Class_state from './Class-state'
 import Func_state from './Func-state'
+import Func2_state from './Func2-state'
 
 function Main_state() {
   return (
@@ -11,7 +12,8 @@ function Main_state() {
       <h1>Hello this state components</h1>
       {/* <Class_state /> */}
 
-      <Func_state />
+      {/* <Func_state /> */}
+      <Func2_state />
     </div>
   )
 }
