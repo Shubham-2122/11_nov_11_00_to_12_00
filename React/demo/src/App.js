@@ -10,6 +10,7 @@ import React_btn from "./boostrap/React-btn";
 import Footer from "./boostrap/Footer";
 import Main_state from "./State/Main-state";
 import Simple_form from "./Form_hadling/Simple-form";
+import Fromdata from "./Form_hadling/Fromdata";
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
       {/* <Main_state /> */}
 
       {/* form hadling data */}
-      <Simple_form />
+      {/* <Simple_form /> */}
+      <Fromdata />
     </div>
   );
 }
