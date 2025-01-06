@@ -11,6 +11,8 @@ import Footer from "./boostrap/Footer";
 import Main_state from "./State/Main-state";
 import Simple_form from "./Form_hadling/Simple-form";
 import Fromdata from "./Form_hadling/Fromdata";
+import UseEffecth from "./useEffect/UseEffecth";
+import UseTable from "./useEffect/UseTable";
 
 function App() {
   return (
@@ -42,7 +44,10 @@ function App() {
 
       {/* form hadling data */}
       {/* <Simple_form /> */}
-      <Fromdata />
+      {/* <Fromdata /> */}
+
+      {/* <UseEffecth /> */}
+      <UseTable />
     </div>
   );
 }
