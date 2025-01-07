@@ -13,6 +13,7 @@ import Simple_form from "./Form_hadling/Simple-form";
 import Fromdata from "./Form_hadling/Fromdata";
 import UseEffecth from "./useEffect/UseEffecth";
 import UseTable from "./useEffect/UseTable";
+import Card_data from "./useEffect/Card_data";
 
 function App() {
   return (
@@ -47,7 +48,8 @@ function App() {
       {/* <Fromdata /> */}
 
       {/* <UseEffecth /> */}
-      <UseTable />
+      {/* <UseTable /> */}
+      <Card_data />
     </div>
   );
 }
