@@ -14,43 +14,64 @@ import Fromdata from "./Form_hadling/Fromdata";
 import UseEffecth from "./useEffect/UseEffecth";
 import UseTable from "./useEffect/UseTable";
 import Card_data from "./useEffect/Card_data";
+import Home from "./Layout/Pages/Home";
+import About from "./Layout/Pages/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contact from "./Layout/Pages/Contact";
+import Help from "./Layout/Pages/Help";
+import Notfount from "./Layout/Pages/Notfount";
 
 function App() {
   return (
-    <div>
-      {/* <h1 className="bg-danger">Hello this app page</h1> */}
-      
-      {/* component */}
-      {/* <Class_compo /> */}
-      {/* <Fun_compo /> */}
+    <BrowserRouter>
+      <div>
+        {/* <h1 className="bg-danger">Hello this app page</h1> */}
 
-      {/* jsx compo */}
-      {/* <Hello /> */}
-      {/* <Hello2 /> */}
+        {/* component */}
+        {/* <Class_compo /> */}
+        {/* <Fun_compo /> */}
 
-      {/* <Css /> */}
+        {/* jsx compo */}
+        {/* <Hello /> */}
+        {/* <Hello2 /> */}
+
+        {/* <Css /> */}
 
 
-      {/* Props data */}
-      
-      {/* <Main /> */}
+        {/* Props data */}
 
-      {/* boostrap */}
-      {/* <Boostrap /> */}
-      {/* <React_btn /> */}
-      {/* <Footer /> */}
+        {/* <Main /> */}
 
-      {/* useState */}
-      {/* <Main_state /> */}
+        {/* boostrap */}
+        {/* <Boostrap /> */}
+        {/* <React_btn /> */}
+        {/* <Footer /> */}
 
-      {/* form hadling data */}
-      {/* <Simple_form /> */}
-      {/* <Fromdata /> */}
+        {/* useState */}
+        {/* <Main_state /> */}
 
-      {/* <UseEffecth /> */}
-      {/* <UseTable /> */}
-      <Card_data />
-    </div>
+        {/* form hadling data */}
+        {/* <Simple_form /> */}
+        {/* <Fromdata /> */}
+
+        {/* <UseEffecth /> */}
+        {/* <UseTable /> */}
+        {/* <Card_data /> */}
+
+        <Routes>
+
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/help" element={<Help />} />
+
+
+          {/* not found *:- path another not found  */}
+          <Route path="*" element={<Notfount />} />
+
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
