@@ -20,6 +20,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./Layout/Pages/Contact";
 import Help from "./Layout/Pages/Help";
 import Notfount from "./Layout/Pages/Notfount";
+import About1 from "./Layout/Pages/About1";
+import About2 from "./Layout/Pages/About2";
 
 function App() {
   return (
@@ -61,7 +63,10 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} >
+            <Route path="/about/about1" element={<About1 />} />
+            <Route path="/about/about2" element={<About2 />} />
+          </Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
 
