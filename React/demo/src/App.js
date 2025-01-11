@@ -22,6 +22,7 @@ import Help from "./Layout/Pages/Help";
 import Notfount from "./Layout/Pages/Notfount";
 import About1 from "./Layout/Pages/About1";
 import About2 from "./Layout/Pages/About2";
+import Main_Content from "./UseContext/Main_Content";
 
 function App() {
   return (
@@ -69,7 +70,7 @@ function App() {
           </Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
-
+          <Route path="/context" element={<Main_Content />} />
 
           {/* not found *:- path another not found  */}
           <Route path="*" element={<Notfount />} />
