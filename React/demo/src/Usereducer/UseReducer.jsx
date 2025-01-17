@@ -8,7 +8,6 @@ import Header from '../Layout/Coman/Header';
 let initalstate = 0;
 
 export function reducer(state, action) {
-
     switch (action) {
         case 'increment':
             return state + 1;
@@ -19,7 +18,6 @@ export function reducer(state, action) {
         default:
             return state
     }
-
 }
 
 
@@ -27,16 +25,15 @@ export function reducer(state, action) {
 function UseReducer() {
 
     const [count, dispatch] = useReducer(reducer, initalstate)
-
-
     return (
 
         <div>
             <Header />
             <h1>Hello count :- {count}</h1>
+            {/* <button onClick={}>incmenrt</button> */}
             <button className='btn btn-success' onClick={()=>dispatch('increment')}>Incement</button>
             <button className='btn btn-danger' onClick={()=>dispatch('decrment')}>Decement</button>
-            <button className='btn btn-primary' onClick={()=>dispatch('zero')}>Decement</button>
+            <button className='btn btn-primary' onClick={()=>dispatch('zero')}>Zero</button>
         </div>
     )
 }
