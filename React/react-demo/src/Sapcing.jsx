@@ -13,6 +13,7 @@ function Sapcing() {
             <div className="main bg-fuchsia-400 mx-10 my-12 px-24 py-44">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis eos voluptas, accusantium commodi esse reprehenderit cupiditate, consectetur a itaque iste dolore adipisci maiores quaerat mollitia deserunt ut architecto fuga porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laborum voluptatem quod quidem cupiditate distinctio reprehenderit odit eos repellendus enim dolore modi, ipsum quia, placeat sed similique. Sit, magnam eveniet?
             </div>
+           
         </div>
     )
 }
