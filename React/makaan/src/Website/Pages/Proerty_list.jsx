@@ -2,30 +2,26 @@ import React from 'react'
 import Header from '../Coman/Header'
 import Footer from '../Coman/Footer'
 
-function Home() {
+function Proerty_list() {
     return (
         <div>
-            {/* https://www.geeksforgeeks.org/json-server-setup-and-introduction/ */}
             <div className="container-xxl bg-white p-0">
                 <Header />
                 {/* Header Start */}
                 <div className="container-fluid header bg-white p-0">
                     <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
                         <div className="col-md-6 p-5 mt-lg-5">
-                            <h1 className="display-5 animated fadeIn mb-4">Find A <span className="text-primary">Perfect Home</span> To Live With Your Family</h1>
-                            <p className="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
-                                sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                            <a href className="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+                            <h1 className="display-5 animated fadeIn mb-4">Property List</h1>
+                            <nav aria-label="breadcrumb animated fadeIn">
+                                <ol className="breadcrumb text-uppercase">
+                                    <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li className="breadcrumb-item"><a href="#">Pages</a></li>
+                                    <li className="breadcrumb-item text-body active" aria-current="page">Property List</li>
+                                </ol>
+                            </nav>
                         </div>
                         <div className="col-md-6 animated fadeIn">
-                            <div className="owl-carousel header-carousel">
-                                <div className="owl-carousel-item">
-                                    <img className="img-fluid" src="img/carousel-1.jpg" alt />
-                                </div>
-                                <div className="owl-carousel-item">
-                                    <img className="img-fluid" src="img/carousel-2.jpg" alt />
-                                </div>
-                            </div>
+                            <img className="img-fluid" src="img/header.jpg" alt />
                         </div>
                     </div>
                 </div>
@@ -64,127 +60,6 @@ function Home() {
                     </div>
                 </div>
                 {/* Search End */}
-                {/* Category Start */}
-                <div className="container-xxl py-5">
-                    <div className="container">
-                        <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: 600 }}>
-                            <h1 className="mb-3">Property Types</h1>
-                            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                        </div>
-                        <div className="row g-4">
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-apartment.png" alt="Icon" />
-                                        </div>
-                                        <h6>Apartment</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-villa.png" alt="Icon" />
-                                        </div>
-                                        <h6>Villa</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-house.png" alt="Icon" />
-                                        </div>
-                                        <h6>Home</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-housing.png" alt="Icon" />
-                                        </div>
-                                        <h6>Office</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-building.png" alt="Icon" />
-                                        </div>
-                                        <h6>Building</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-neighborhood.png" alt="Icon" />
-                                        </div>
-                                        <h6>Townhouse</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-condominium.png" alt="Icon" />
-                                        </div>
-                                        <h6>Shop</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                                <a className="cat-item d-block bg-light text-center rounded p-3" href>
-                                    <div className="rounded p-4">
-                                        <div className="icon mb-3">
-                                            <img className="img-fluid" src="img/icon-luxury.png" alt="Icon" />
-                                        </div>
-                                        <h6>Garage</h6>
-                                        <span>123 Properties</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Category End */}
-                {/* About Start */}
-                <div className="container-xxl py-5">
-                    <div className="container">
-                        <div className="row g-5 align-items-center">
-                            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div className="about-img position-relative overflow-hidden p-5 pe-0">
-                                    <img className="img-fluid w-100" src="img/about.jpg" />
-                                </div>
-                            </div>
-                            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                                <h1 className="mb-4">#1 Place To Find The Perfect Property</h1>
-                                <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                <p><i className="fa fa-check text-primary me-3" />Tempor erat elitr rebum at clita</p>
-                                <p><i className="fa fa-check text-primary me-3" />Aliqu diam amet diam et eos</p>
-                                <p><i className="fa fa-check text-primary me-3" />Clita duo justo magna dolore erat amet</p>
-                                <a className="btn btn-primary py-3 px-5 mt-3" href>Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* About End */}
                 {/* Property List Start */}
                 <div className="container-xxl py-5">
                     <div className="container">
@@ -600,130 +475,6 @@ function Home() {
                     </div>
                 </div>
                 {/* Call to Action End */}
-                {/* Team Start */}
-                <div className="container-xxl py-5">
-                    <div className="container">
-                        <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: 600 }}>
-                            <h1 className="mb-3">Property Agents</h1>
-                            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                        </div>
-                        <div className="row g-4">
-                            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div className="team-item rounded overflow-hidden">
-                                    <div className="position-relative">
-                                        <img className="img-fluid" src="img/team-1.jpg" alt />
-                                        <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-facebook-f" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-twitter" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-instagram" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="text-center p-4 mt-3">
-                                        <h5 className="fw-bold mb-0">Full Name</h5>
-                                        <small>Designation</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div className="team-item rounded overflow-hidden">
-                                    <div className="position-relative">
-                                        <img className="img-fluid" src="img/team-2.jpg" alt />
-                                        <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-facebook-f" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-twitter" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-instagram" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="text-center p-4 mt-3">
-                                        <h5 className="fw-bold mb-0">Full Name</h5>
-                                        <small>Designation</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div className="team-item rounded overflow-hidden">
-                                    <div className="position-relative">
-                                        <img className="img-fluid" src="img/team-3.jpg" alt />
-                                        <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-facebook-f" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-twitter" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-instagram" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="text-center p-4 mt-3">
-                                        <h5 className="fw-bold mb-0">Full Name</h5>
-                                        <small>Designation</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                                <div className="team-item rounded overflow-hidden">
-                                    <div className="position-relative">
-                                        <img className="img-fluid" src="img/team-4.jpg" alt />
-                                        <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-facebook-f" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-twitter" /></a>
-                                            <a className="btn btn-square mx-1" href><i className="fab fa-instagram" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="text-center p-4 mt-3">
-                                        <h5 className="fw-bold mb-0">Full Name</h5>
-                                        <small>Designation</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Team End */}
-                {/* Testimonial Start */}
-                <div className="container-xxl py-5">
-                    <div className="container">
-                        <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: 600 }}>
-                            <h1 className="mb-3">Our Clients Say!</h1>
-                            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                        </div>
-                        <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="testimonial-item bg-light rounded p-3">
-                                <div className="bg-white border rounded p-4">
-                                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                                    <div className="d-flex align-items-center">
-                                        <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style={{ width: 45, height: 45 }} />
-                                        <div className="ps-3">
-                                            <h6 className="fw-bold mb-1">Client Name</h6>
-                                            <small>Profession</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="testimonial-item bg-light rounded p-3">
-                                <div className="bg-white border rounded p-4">
-                                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                                    <div className="d-flex align-items-center">
-                                        <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style={{ width: 45, height: 45 }} />
-                                        <div className="ps-3">
-                                            <h6 className="fw-bold mb-1">Client Name</h6>
-                                            <small>Profession</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="testimonial-item bg-light rounded p-3">
-                                <div className="bg-white border rounded p-4">
-                                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                                    <div className="d-flex align-items-center">
-                                        <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style={{ width: 45, height: 45 }} />
-                                        <div className="ps-3">
-                                            <h6 className="fw-bold mb-1">Client Name</h6>
-                                            <small>Profession</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Testimonial End */}
                 <Footer />
                 {/* Back to Top */}
                 <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up" /></a>
@@ -733,4 +484,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Proerty_list

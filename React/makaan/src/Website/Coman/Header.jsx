@@ -23,19 +23,18 @@ function Header() {
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
                                 <div className="dropdown-menu rounded-0 m-0">
-                                    <a href="property-list.html" className="dropdown-item">Property List</a>
-                                    <a href="property-type.html" className="dropdown-item">Property Type</a>
-                                    <a href="property-agent.html" className="dropdown-item">Property Agent</a>
+                                    <NavLink to="/propertylist" className="dropdown-item">Property List</NavLink>
+                                    <NavLink to="/propertytype" className="dropdown-item">Property Type</NavLink>
+                                    <NavLink to="/propertyagent" className="dropdown-item">Property Agent</NavLink>
                                 </div>
                             </div>
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu rounded-0 m-0">
-                                    <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                                    <a href="404.html" className="dropdown-item">404 Error</a>
+                                    <NavLink to="/testimonial" className="dropdown-item">Testimonial</NavLink>
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link">Contact</a>
+                            <NavLink to="/Contact" className="nav-item nav-link">Contact</NavLink>
                         </div>
                         <a href className="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
                     </div>
