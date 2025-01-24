@@ -35,5 +35,55 @@
             "phone":"9876235675",
             "status":"unblock"
         }
+    ],
+    "propertylist":[
+        {
+            "id":1,
+            "hometype":"Villa",
+            "Proertytype":"For Sell",
+            "img":"https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "price":"12543",
+            "name":"Golden Urban House For Sell",
+            "location":"123 Street, New York, USA",
+            "room":"3",
+            "bath":"2",
+            "yard":"1000 Sqft"
+        },
+        {
+            "id":2,
+            "hometype":"Appartment",
+            "Proertytype":"For Rent",
+            "img":"https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "price":"543",
+            "name":"Golden Urban Appartment For Sell",
+            "location":"123 Street,gujarat,india",
+            "room":"4",
+            "bath":"3",
+            "yard":"1200 Sqft"
+        },
+        {
+            "id":3,
+            "hometype":"Office",
+            "Proertytype":"For Sell",
+            "img":"https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "price":"700",
+            "name":"Golden Urban Office For Sell",
+            "location":"123 Street,surat,india",
+            "room":"4",
+            "bath":"3",
+            "yard":"1200 Sqft"
+        },
+        {
+            "id":4,
+            "hometype":"House",
+            "Proertytype":"For Rent",
+            "img":"https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "price":"700",
+            "name":"Golden Urban House For Sell",
+            "location":"123 Street,Ahemdabad,india",
+            "room":"4",
+            "bath":"3",
+            "yard":"1200 Sqft"
+        }
     ]
 }
