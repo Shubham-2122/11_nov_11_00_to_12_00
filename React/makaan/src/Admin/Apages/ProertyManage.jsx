@@ -17,6 +17,14 @@ function ProertyManage() {
         setpropertylist(res.data)
     }
 
+    
+    // get view
+
+    const getview = async (id) => {
+        const res = await axios.get(`http://localhost:3000/propertylist/${id}`)
+        console.log(res.data)
+    }
+
     return (
         <div>
             <AHeader />
@@ -38,9 +46,9 @@ function ProertyManage() {
                     <MDBTableBody>
                         {
                             propertylist && propertylist.map((proprty, index) => {
-                                const {id,hometype,Proertytype,price,name,location,yard} = proprty
+                                const { id, hometype, Proertytype, price, name, location, yard } = proprty
                                 return (
-                                    <tr>
+                                    <tr key={index}>
                                         <th scope='row'>{id}</th>
                                         <td>{hometype}</td>
                                         <td>{Proertytype}</td>
@@ -49,7 +57,8 @@ function ProertyManage() {
                                         <td>{price}</td>
                                         <td>{yard}</td>
                                         <td>
-                                            <button className='btn btn-primary'>View</button>
+                                            {/* <button className='btn btn-primary' data-bs-toggle="modal" href="#exampleModalToggle" onClick={() => getview(id)}>View</button> */}
+                                            <button className='btn btn-primary' onClick={() => getview(id)}>View</button>
                                             <button className='btn btn-success mx-2'>Edit</button>
                                             <button className='btn btn-danger'>Delete</button>
                                         </td>
@@ -57,6 +66,41 @@ function ProertyManage() {
                                 )
                             })
                         }
+                        {/* <div>
+                            <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex={-1}>
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h5 className="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                                        </div>
+                                        <div className="modal-body">
+                                            Show a second modal and hide this one with the button below.
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex={-1}>
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h5 className="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                                        </div>
+                                        <div className="modal-body">
+                                            Hide this modal and show the first with the button below.
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button className="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> */}
+
                     </MDBTableBody>
                 </MDBTable>
             </div>
