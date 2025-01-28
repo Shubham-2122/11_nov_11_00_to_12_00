@@ -10,6 +10,7 @@ import Contact from "./Website/Pages/Contact";
 import NotFound from "./Website/Pages/NotFound";
 import Dashbaord from "./Admin/Apages/Dashbaord";
 import ProertyManage from "./Admin/Apages/ProertyManage";
+import Addproperty from "./Admin/Apages/Addproperty";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         {/* admin routes */}
         <Route path="/dashboard" element={<Dashbaord />} />
         <Route path="/perotymanage" element={<ProertyManage />} />
+        <Route path="/addpropty" element={<Addproperty />} />
       </Routes>
     </div>
     </BrowserRouter>

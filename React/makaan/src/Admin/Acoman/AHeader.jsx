@@ -23,8 +23,8 @@ function AHeader() {
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">ProertyList</a>
                                 <div className="dropdown-menu rounded-0 m-0">
                                     <NavLink to="/perotymanage" className="dropdown-item">Proerty manage</NavLink>
-                                    {/* <NavLink to="/propertytype" className="dropdown-item">Property Type</NavLink>
-                                    <NavLink to="/propertyagent" className="dropdown-item">Property Agent</NavLink> */}
+                                    <NavLink to="/addpropty" className="dropdown-item">Add Property</NavLink>
+                                
                                 </div>
                             </div>
                             <div className="nav-item dropdown">
