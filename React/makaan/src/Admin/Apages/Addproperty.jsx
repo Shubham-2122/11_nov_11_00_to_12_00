@@ -30,6 +30,8 @@ function Addproperty() {
     }
 
     const hadalesubmit=async(e)=>{
+
+        // Refresh na thay
         e.preventDefault()
 
         if(proerty.Proertytype == "" ){
