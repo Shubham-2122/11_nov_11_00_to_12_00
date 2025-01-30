@@ -37,6 +37,9 @@ function Header() {
                             <li className="nav-item">
                                 <NavLink className="nav-link " to="/Reducer" >UseReducer</NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link " to="/life" >Lifecycle</NavLink>
+                            </li>
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
