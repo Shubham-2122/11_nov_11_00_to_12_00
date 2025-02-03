@@ -11,6 +11,7 @@ function ProertyManage() {
         getdata()
     }, [])
 
+    // all data get
     const getdata = async () => {
         const res = await axios.get("http://localhost:3000/propertylist")
         // console.log(res.data)
@@ -18,8 +19,7 @@ function ProertyManage() {
     }
 
 
-    // get view
-
+    // get view id
     const [viewdata, setviewdata] = useState({
         id:"",
         hometype:"",
@@ -33,10 +33,18 @@ function ProertyManage() {
         yard:""
     })
 
+    // id get
     const getview = async (id) => {
         const res = await axios.get(`http://localhost:3000/propertylist/${id}`)
         console.log(res.data)
         setviewdata(res.data)
+    }
+
+    // delete data
+    const deletedata= async(id)=>{
+        const res = await axios.delete(`http://localhost:3000/propertylist/${id}`)
+        console.log(res.data)
+        getdata()
     }
 
     return (
@@ -74,7 +82,7 @@ function ProertyManage() {
                                             <button className='btn btn-primary' data-bs-toggle="modal" href="#exampleModalToggle" onClick={() => getview(id)}>View</button>
                                             {/* <button className='btn btn-primary' onClick={() => getview(id)}>View</button> */}
                                             <button className='btn btn-success mx-2'>Edit</button>
-                                            <button className='btn btn-danger'>Delete</button>
+                                            <button className='btn btn-danger' onClick={()=>deletedata(id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )

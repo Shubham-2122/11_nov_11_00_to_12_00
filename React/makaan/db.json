@@ -108,18 +108,6 @@
       "room": "3",
       "bath": "2",
       "yard": "200"
-    },
-    {
-      "id": "1738129045354",
-      "hometype": "Office",
-      "Proertytype": "For rent",
-      "img": "https://images.pexels.com/photos/2159074/pexels-photo-2159074.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "price": "5000",
-      "name": "Shop new data",
-      "location": "surat,gujarat,india",
-      "room": "4",
-      "bath": "2",
-      "yard": "450"
     }
   ]
 }
