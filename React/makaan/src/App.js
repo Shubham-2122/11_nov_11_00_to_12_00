@@ -11,6 +11,8 @@ import NotFound from "./Website/Pages/NotFound";
 import Dashbaord from "./Admin/Apages/Dashbaord";
 import ProertyManage from "./Admin/Apages/ProertyManage";
 import Addproperty from "./Admin/Apages/Addproperty";
+import Alogin from "./Admin/Apages/Alogin";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -36,7 +38,9 @@ function App() {
         <Route path="/dashboard" element={<Dashbaord />} />
         <Route path="/perotymanage" element={<ProertyManage />} />
         <Route path="/addpropty" element={<Addproperty />} />
+        <Route path="/alogin" element={<Alogin />} />
       </Routes>
+      <ToastContainer />
     </div>
     </BrowserRouter>
   );
