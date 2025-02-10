@@ -13,6 +13,7 @@ import ProertyManage from "./Admin/Apages/ProertyManage";
 import Addproperty from "./Admin/Apages/Addproperty";
 import Alogin from "./Admin/Apages/Alogin";
 import { ToastContainer } from 'react-toastify';
+import Login from "./Website/Pages/Login";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/propertyagent" element={<Propertyagent />} />
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
 
 
         {/* Notfound */}

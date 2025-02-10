@@ -1,7 +1,24 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Header() {
+
+    const redirect = useNavigate()
+
+    useEffect(()=>{
+        if(!localStorage.getItem("userid")){
+            redirect("/login")
+        }
+    })
+
+    const logout=()=>{
+        localStorage.removeItem("userid");
+        localStorage.removeItem("username");
+        redirect("/login")
+        toast.success("user logout success")
+    }
+
     return (
         <div>
             {/* Navbar Start */}
@@ -35,8 +52,39 @@ function Header() {
                                 </div>
                             </div>
                             <NavLink to="/Contact" className="nav-item nav-link">Contact</NavLink>
+                            {(
+                                ()=>{
+                                    if(localStorage.getItem("userid")){
+                                        return(
+                                            <>
+                                                 <NavLink className="nav-item nav-link">hello..{localStorage.getItem("username")}</NavLink>
+                                            </>
+                                        )
+                                    }
+                                }
+                            )()}
+
+                            {(
+                                ()=>{
+                                    if(localStorage.getItem("userid")){
+                                        return(
+                                            <>
+                                                <NavLink onClick={logout} className="nav-item nav-link">Logout</NavLink>
+                                            </>
+                                        )
+                                    }
+                                    else{
+                                        return(
+                                            <>
+                                                <NavLink className="nav-item nav-link">Login</NavLink>
+                                            </>
+                                        )
+                                    }
+                                }
+                            )()}
+
                         </div>
-                        <a href className="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                       
                     </div>
                 </nav>
             </div>

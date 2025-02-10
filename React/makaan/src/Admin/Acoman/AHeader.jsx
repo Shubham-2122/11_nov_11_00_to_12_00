@@ -13,7 +13,7 @@ function AHeader() {
     })
 
     const logout=()=>{
-        localStorage.removeItem("adminid")
+        localStorage.removeItem("adminid");
         localStorage.removeItem("adminname");
         redirect("/alogin")
         toast.success("admin logout success")
