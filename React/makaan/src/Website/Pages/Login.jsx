@@ -13,7 +13,7 @@ import {
     from 'mdb-react-ui-kit';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
 
@@ -118,7 +118,7 @@ function Login() {
                                         <a href="!#">Forgot password?</a>
                                     </div>
                                     <div>
-                                        <p className="mb-3 text-center">Don't have an account? <a href="#!" class="text-black  fw-bold">Sign Up</a></p>
+                                        <p className="mb-3 text-center">Don't have an account? <Link to="/register" class="text-black  fw-bold">Sign Up</Link></p>
 
                                     </div>
 

@@ -14,6 +14,7 @@ import Addproperty from "./Admin/Apages/Addproperty";
 import Alogin from "./Admin/Apages/Alogin";
 import { ToastContainer } from 'react-toastify';
 import Login from "./Website/Pages/Login";
+import Register from "./Website/Pages/Register";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
 
         {/* Notfound */}

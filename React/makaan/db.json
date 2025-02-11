@@ -34,6 +34,15 @@
       "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",
       "phone": "9876235675",
       "status": "unblock"
+    },
+    {
+      "id": "1739251911673",
+      "name": "rutivik",
+      "email": "rutvik@gmail.com",
+      "password": "123456",
+      "img": "https://images.pexels.com/photos/30225139/pexels-photo-30225139/free-photo-of-fashionable-young-man-posing-outdoors-in-urban-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "phone": "568256523",
+      "status": "unblock"
     }
   ],
   "propertylist": [
