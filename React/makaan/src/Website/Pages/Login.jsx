@@ -55,7 +55,7 @@ function Login() {
         try {
             
             const res = await axios.get(`http://localhost:3000/users?email=${email}`)
-            console.log(res.data)
+            console.log(res)
 
             // email id length 
             if(res.data.length == 0){

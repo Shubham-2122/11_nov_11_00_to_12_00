@@ -1,0 +1,281 @@
+https://www.devknus.com/course/tutorialfirebase/firebasereact/5
+
+firebase install 
+and created project
+npm install firebase
+
+created firstore database and 
+firebase file to creted 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+import {getFirestore} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAgcLGE6bEZI9Yul1Ed4TmDducEJzynQBg",
+  authDomain: "crud1-a1310.firebaseapp.com",
+  projectId: "crud1-a1310",
+  storageBucket: "crud1-a1310.appspot.com",
+  messagingSenderId: "850911456197",
+  appId: "1:850911456197:web:b6ae923b9c2bb4d12a39ac",
+  measurementId: "G-BSYLZTB0DT"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+export const fireDb = getFirestore(app)
+
+
+context data folder in Mycontext.jsx
+import { createContext } from "react";
+
+const MyContext = createContext();
+export default MyContext;
+
+Mystate.jsx
+
+import React from 'react'
+import MyContext from './MyContext'
+
+function MyState(props) {
+    const name = "Shubham"
+  return (
+    <MyContext.Provider value={{name}}>
+      {props.children}
+    </MyContext.Provider>
+  )
+}
+
+export default MyState;
+
+
+App.jsx in MyState Wrep in Broweser router 
+
+MyState.jsx
+ const [products, setProducts] = useState({
+        title: "",
+        price: "",
+        imageUrl: "",
+        category: "",
+        time: Timestamp.now(),
+        date: new Date().toLocaleString(
+            "en-US",
+            {
+                month: "short",
+                day: "2-digit",
+                year: "numeric",
+            }
+        )
+    });
+
+    // add Product Function
+
+    const addProduct = async () => {
+        // validtion
+        if (products.title == "" || products.price == "" || products.imageUrl == "" || products.category == "") {
+            return alert("all Fields are required")
+        }
+
+        // product refrence
+        const ProductRef = collection(fireDb,"products")
+
+        try {
+            // productred , usestate to products
+            await addDoc(ProductRef, products);
+            getProducts();
+            alert("products added successfully");
+            setTimeout(()=>{
+                window.location.href = "/"
+            },1000)
+            setProducts("");
+            
+        } catch (error) {
+            console.log(error)   
+        }
+    }
+
+read 
+// get products data
+
+    const [allProducts, setAllProducts] = useState([]);
+
+    const getProducts = async () =>{
+        try {
+            const q = query(
+                collection(fireDb, 'products'),
+                orderBy('time')
+            )
+
+            const data = onSnapshot(q,(QuerySnapshot)=>{
+                let productArray = [];
+                QuerySnapshot.forEach((doc)=>{
+                    // data and id
+                    productArray.push({...doc.data, id: doc.id})
+                })
+                setAllProducts(productArray)
+            })
+
+            return () => data;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(()=>{
+        getProducts();
+    },[])
+
+
+
+
+
+1. add  product 
+ const context = useContext(MyContext)
+    // console.log(context)
+
+
+    const {products ,setProducts ,addProduct } = context;
+
+      <input type="text"
+            value={products.title}
+            onChange={(e)=> setProducts({...products,title:e.target.value})}
+            name='title'
+            className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
+            placeholder='Product Title'
+    />
+
+    <button
+        onClick={addProduct}
+            className=' bg-blue-500 w-full text-white font-bold  px-2 py-2 rounded-lg'>
+                Add product
+    </button>
+
+2.get data productTable 
+    const context = useContext(MyContext);
+
+    const {allProducts } =context;
+
+     {
+                                allProducts.map((item,index)=>{
+
+                                    const {title,price,imageUrl,category,date} =item
+                                    return(
+                                        <tbody key={index}>
+                              
+                                <tr className="bg-gray-700 border-b text-white ">
+                                    <td className="px-6 py-4">{index + 1}</td>
+                                    <td className="px-6 py-4 w-16">
+                                        <img className='w-16' src={imageUrl} alt="" />
+                                    </td>
+                                    <td className="px-6 py-4">{title}</td>
+                                    <td className="px-6 py-4">₹{price}</td>
+                                    <td className="px-6 py-4">{category}</td>
+                                    <td className="px-6 py-4">1{date}</td>
+                                  <td className="px-6 py-4">
+                                                <a
+                                                    className="font-medium bg-red-300 px-4 rounded-lg py-1 text-black cursor-pointer  "
+                                                >
+                                                    Del
+                                                </a>
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                <Link to="/updateproduct"
+                                                    className="font-medium bg-green-300 px-4 rounded-lg py-1 text-black
+                                                    cursor-pointer"
+                                                >
+                                                    Edit
+                                                </Link>
+                                            </td>
+                                </tr>
+                            </tbody>
+                                    )
+                                })
+                            }
+
+    
+    3. update product 
+
+    // allproduct item aayega
+    const editProducthandle = (item)=>{
+        setProducts(item)
+    }
+
+    // edit handle function
+
+    const editProducts = async (item)=> {
+        try {
+            // setdoc data aayega usko change karege
+            await setDoc(doc(fireDb, 'products',products.id) ,products)
+            getProducts();
+            alert("product update successFully");
+            setTimeout(()=>{
+                window.location.href = "/"
+            },800)
+            setProducts("")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+4. delete function
+    const deleteProduct = async (item) =>{
+        try {
+            // deletdoc method use doc (dirdb,collection,item.id)
+            await deleteDoc(doc(fireDb, "products", item.id))
+            getProducts();
+            alert("Product deleted Successfully");
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+// productTable ma
+
+    const context = useContext(MyContext);
+
+    const {allProducts,deleteProduct,editProducthandle } =context;
+
+ <td className="px-6 py-4">
+         <a
+             onClick={()=>deleteProduct(item)}
+                className="font-medium bg-red-300 px-4 rounded-lg py-1 text-black cursor-pointer  "
+         >
+            Del
+          </a>
+             </td>
+                 <td className="px-6 py-4">
+                    <Link to="/updateproduct"
+                    nClick={()=>editProducthandle(item)}
+               className="font-medium bg-green-300 px-4 rounded-lg py-1 text-black
+             cursor-pointer"
+             >
+         Edit
+       </Link>
+ </td>
+
+
+
+// updateproduct
+ const context = useContext(MyContext)
+   // console.log(context)
+
+
+   const {products ,setProducts ,editProducts } = context;
+    <input type="text"
+         value={products.title}
+        onChange={(e)=> setProducts({...products,title:e.target.value})}
+         name='title'
+        className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
+            placeholder='Product Title'
+     />
+      <button
+        onClick={editProducts}
+         className=' bg-orange-500 w-full text-white font-bold  px-2 py-2 rounded-lg'>
+          Update Product
+       </button>
+serach functionalty
