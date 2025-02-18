@@ -58,7 +58,8 @@ function ProductTable() {
                                     </th>
                                 </tr>
                             </thead>
-                            {allProductsfillter.length > 0 ? allProductsfillter.map((item, index) => {
+                            {
+                            allProductsfillter.length > 0 ? allProductsfillter.map((item, index) => {
 
                                 const { title, price, imageUrl, category, date } = item
                                 return (

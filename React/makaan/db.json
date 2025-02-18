@@ -114,18 +114,6 @@
       "room": "4",
       "bath": "3",
       "yard": "300"
-    },
-    {
-      "id": "1738042788609",
-      "hometype": "Office",
-      "Proertytype": "For sell",
-      "img": "https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "price": "35000",
-      "name": "appratment",
-      "location": "gujarat",
-      "room": "3",
-      "bath": "2",
-      "yard": "300"
     }
   ]
 }
