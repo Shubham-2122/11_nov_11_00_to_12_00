@@ -25,6 +25,7 @@ import About2 from "./Layout/Pages/About2";
 import Main_Content from "./UseContext/Main_Content";
 import UseReducer from "./Usereducer/UseReducer";
 import LifeCycle from "./Lifecycle/LifeCycle";
+import UseRef from "./Usereducer/UseRef";
 
 function App() {
   return (
@@ -75,6 +76,7 @@ function App() {
           <Route path="/context" element={<Main_Content />} />
           <Route path="/Reducer" element={<UseReducer />} />
           <Route path="/life" element={<LifeCycle />} />
+          <Route path="/ref" element={<UseRef />} />
 
           {/* not found *:- path another not found  */}
           <Route path="*" element={<Notfount />} />

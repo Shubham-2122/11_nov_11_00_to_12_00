@@ -5,7 +5,7 @@ import Header from '../Layout/Coman/Header';
 // useReducer :- complex logic trigger / coman data / Reducer Repeted code coman logic will use
 // intal state , reducer , dispatch
 
-let initalstate = 0;
+let initalstate = 1;
 
 export function reducer(state, action) {
     switch (action) {
@@ -31,7 +31,8 @@ function UseReducer() {
             <Header />
             <h1>Hello count :- {count}</h1>
             {/* <button onClick={}>incmenrt</button> */}
-            <button className='btn btn-success' onClick={()=>dispatch('increment')}>Incement</button>
+            <button  className='btn btn-success' onClick={()=>dispatch('increment')} >Increment</button>
+
             <button className='btn btn-danger' onClick={()=>dispatch('decrment')}>Decement</button>
             <button className='btn btn-primary' onClick={()=>dispatch('zero')}>Zero</button>
         </div>
