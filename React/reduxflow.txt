@@ -1,0 +1,27 @@
+React :- state
+
+Redux :- state global manage lib
+
+redux Flow
+
+Action :- user -> book buy,sell,
+reducer :- shopk -> logic -> combine reducer
+store :- stol -> stroage data
+
+
+Action --> reducer -- > store(data) :- floder
+
+React+redux :- store only one :- data
+  
+Agulr+redux :- store one and more :- data 
+
+RTK toolkit :- redux toolkit :- 
+	Store
+	slice :- action , reducer , extrareducer
+
+redux code store slice js
+
+useSelector :- store data
+useDispatch :- reducer use store function export
+
+ 
