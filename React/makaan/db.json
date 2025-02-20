@@ -48,7 +48,7 @@
       "id": "1739337075420",
       "name": "sujal jadav",
       "email": "shubham@gmail.com",
-      "password": "1234",
+      "password": "123456",
       "img": "https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=600",
       "phone": "9824024708",
       "status": "unblock"
@@ -108,10 +108,10 @@
       "hometype": "Villa",
       "Proertytype": "For sell",
       "img": "https://images.pexels.com/photos/36355/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-      "price": "2000",
+      "price": "20000",
       "name": "House Department",
       "location": "lonavala ,india",
-      "room": "4",
+      "room": "5",
       "bath": "3",
       "yard": "300"
     }
