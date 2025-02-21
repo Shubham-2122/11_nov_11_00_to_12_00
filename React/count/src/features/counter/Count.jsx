@@ -4,6 +4,7 @@ import { decrement } from './counterSlice';
 
 function Count() {
 
+  // data read
     const count = useSelector((state)=> state.counter.value);
 
     const disptch = useDispatch()
