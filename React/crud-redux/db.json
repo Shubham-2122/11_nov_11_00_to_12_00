@@ -1,0 +1,25 @@
+{
+    "users":[
+        {
+            "id":"1",
+            "name":"shubham jadav",
+            "email":"jadavshubham5@gmail.com",
+            "password":"1234",
+            "phone":"12345678901"
+        },
+        {
+            "id":"2",
+            "name":"Rutvik patel",
+            "email":"rutvik@gmail.com",
+            "password":"4321",
+            "phone":"3423423423"
+        },
+        {
+            "id":"3",
+            "name":"Khusboo patel",
+            "email":"Khusboo@gmail.com",
+            "password":"123456",
+            "phone":"353453456"
+        }
+    ]
+}
