@@ -18,10 +18,11 @@ export const showuser = createAsyncThunk(
 // createdata
 export const createdata = createAsyncThunk(
     "createdata",async(data,{rejectWithValue})=>{
-        const res = await axios.post("http://localhost:3000/users",data)
+        const res =  await axios.post("http://localhost:3000/users",data)
         try {
-            const resp = res.data
-            return resp
+            const resp = res.data;
+            return resp;
+
         } catch (error) {
             return rejectWithValue(error)
         }
@@ -65,15 +66,17 @@ export const userDetails = createSlice({
         })
         // create
         .addCase(createdata.pending,(state)=>{
-            state.loading = true
+            state.loading = true;
         })
         .addCase(createdata.fulfilled,(state,action)=>{
+            state.loading = false;
             state.user.push(action.payload)
         })
         .addCase(createdata.rejected,(state,action)=>{
             state.loading = false;
-            state.error = action.payload
+            state.error = action.payload;
         })
+
     }
 })
 
