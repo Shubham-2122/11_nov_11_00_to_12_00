@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { showuser } from '../feachure/userDetails'
+import { deletedata, showuser } from '../feachure/userDetails'
+import { useNavigate } from 'react-router-dom'
 
 function Read() {
+
+    const redirect = useNavigate()
 
     const {user,loading} = useSelector((state)=> state.users)
     console.log(user)
@@ -12,6 +15,14 @@ function Read() {
     },[])
 
     const dispatch = useDispatch()
+
+    const hadledelete=(id)=>{
+        dispatch(deletedata(id))
+    }
+
+    const hadleedit=()=>{
+        redirect("/update")
+    }
 
 
     return (
@@ -40,8 +51,8 @@ function Read() {
                             <td>{data.phone}</td>
                             <td className='text-center'>
                                 <button className='btn btn-info'>View</button>
-                                <button className='btn btn-success mx-2'>Edit</button>
-                                <button className='btn btn-danger'>delete</button>
+                                <button className='btn btn-success mx-2' onClick={hadleedit} >Edit</button>
+                                <button className='btn btn-danger' onClick={()=>hadledelete(data.id)}>delete</button>
                             </td>
                         </tr>
                         )

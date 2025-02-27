@@ -15,18 +15,32 @@
       "phone": "3423423423"
     },
     {
-      "id": "3",
-      "name": "Khusboo patel",
-      "email": "Khusboo@gmail.com",
-      "password": "123456",
-      "phone": "353453456"
-    },
-    {
       "id": "1740553058639",
       "name": "Het patel",
       "email": "het@gmail.com",
       "phone": "324324325",
       "password": "654321"
+    },
+    {
+      "id": "1740638459123",
+      "name": "nishil1 patel",
+      "email": "nishil@gmail.com",
+      "phone": "2343252455346",
+      "password": "324234"
+    },
+    {
+      "id": "1740638603224",
+      "name": "vraj patel",
+      "email": "varj@gmail.com",
+      "password": "ssdasd",
+      "phone": "234325234"
+    },
+    {
+      "id": "1740638820474",
+      "name": "dhaval",
+      "email": "dhaval@gmail.com",
+      "password": "nsbdjhagb",
+      "phone": "5643634345"
     }
   ]
 }

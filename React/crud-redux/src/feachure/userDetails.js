@@ -29,6 +29,32 @@ export const createdata = createAsyncThunk(
     }
 )
 
+// delele data
+export const deletedata = createAsyncThunk(
+    "deletedata",async(id,{rejectWithValue})=>{
+        const res = await axios.delete(`http://localhost:3000/users/${id}`)
+        try {
+            const resp = res.data 
+            return resp;
+        } catch (error) {
+            return rejectWithValue(error)
+        }
+    }
+)
+
+// edit data
+export const editdata = createAsyncThunk(
+    "editdata",async(data,{rejectWithValue})=>{
+        const res = await axios.put(`http://localhost:3000/users/${data.id}`,data)
+        try {
+            const resp =res.data
+            return resp
+        } catch (error) {
+            return rejectWithValue(error)
+        }
+    }
+)
+
 
 export const userDetails = createSlice({
     name:"userDetail",
@@ -75,6 +101,40 @@ export const userDetails = createSlice({
         .addCase(createdata.rejected,(state,action)=>{
             state.loading = false;
             state.error = action.payload;
+        })
+
+        // delete data
+        .addCase(deletedata.pending,(state,action)=>{
+            state.loading = true
+        })
+        .addCase(deletedata.fulfilled,(state,action)=>{
+            state.loading = false;
+
+            const {id} = action.payload;
+            if(id){
+                state.user = state.user.filter((data)=> data.id !== id)
+            }
+
+        })
+        .addCase(deletedata.rejected,(state,action)=>{
+            state.loading = false;
+            state.error = action.payload
+        })
+
+        // update
+        .addCase(editdata.pending,(state,action)=>{
+            state.loading = true
+        })
+        .addCase(editdata.fulfilled,(state,action)=>{
+            state.loading = false;
+
+            const {id} = action.payload;
+            state.user = state.user.findIndex((data)=> data.id === id)
+        })
+
+        .addCase(editdata.rejected,(state,action)=>{
+            state.loading = false;
+            state.error = action.payload
         })
 
     }

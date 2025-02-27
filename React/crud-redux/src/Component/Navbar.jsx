@@ -1,7 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 function Navbar() {
+
+    const {user} = useSelector((state)=>state.users)
+    console.log(user)
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-dark">
@@ -16,7 +21,7 @@ function Navbar() {
                                 <NavLink className="nav-link text-white" aria-current="page" to="/">Create</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link text-white" to="/read">Read</NavLink>
+                                <NavLink className="nav-link text-white" to="/read">Read({user.length})</NavLink>
                             </li>
                             {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
