@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { deletedata, showuser } from '../feachure/userDetails'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 function Read() {
 
@@ -20,9 +20,9 @@ function Read() {
         dispatch(deletedata(id))
     }
 
-    const hadleedit=()=>{
-        redirect("/update")
-    }
+    // const hadleedit=(id)=>{
+    //     redirect(`/update/${id}`)
+    // }
 
 
     return (
@@ -51,7 +51,7 @@ function Read() {
                             <td>{data.phone}</td>
                             <td className='text-center'>
                                 <button className='btn btn-info'>View</button>
-                                <button className='btn btn-success mx-2' onClick={hadleedit} >Edit</button>
+                                <NavLink to={`/update/${data.id}`} className='btn btn-success mx-2' >Edit</NavLink>
                                 <button className='btn btn-danger' onClick={()=>hadledelete(data.id)}>delete</button>
                             </td>
                         </tr>

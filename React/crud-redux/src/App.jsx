@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/read" element={<Read />} />
         <Route path="/" element={<Create />} />
-        <Route path="/update" element={<Update />} />
+        <Route path="/update/:id" element={<Update />} />
       </Routes>
     </BrowserRouter>
   )

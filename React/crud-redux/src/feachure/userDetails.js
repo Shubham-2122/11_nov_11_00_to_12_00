@@ -128,8 +128,15 @@ export const userDetails = createSlice({
         .addCase(editdata.fulfilled,(state,action)=>{
             state.loading = false;
 
-            const {id} = action.payload;
-            state.user = state.user.findIndex((data)=> data.id === id)
+            // const {id} = action.payload;
+            // state.user = state.user.findIndex((data)=> data.id === id)
+
+
+            state.user = state.user.map((ele)=>
+                // edit query
+                ele.id = action.payload.id ? action.payload : ele
+
+            )
         })
 
         .addCase(editdata.rejected,(state,action)=>{
