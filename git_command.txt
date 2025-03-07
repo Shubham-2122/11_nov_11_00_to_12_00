@@ -1,0 +1,23 @@
+first time use 
+git config --global user.email "your-email@example.com"
+git config --global user.name "Your Name"
+
+new respositry
+1) git init
+2) git add .
+3) git status 
+4) git commit -m "first commit"
+5) git branch -M main
+6) git remote add origin https://github.com/Shubham-2122/xyz.git
+7) git push -u origin main
+
+new file
+1) git add .
+2) git status
+3) git commit -m "file name"
+4) git push -u origin main 
+
+
+Tailwind update component
+1)https://www.devui.io/components
+2)https://www.pexels.com/search/nature/
